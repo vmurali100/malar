@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button onclick="sayHello()">Click me</button> -->
+    <button>Click me</button>
+    <div id="myImages">
+      <img
+        src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"
+        alt=""
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcStV_uE-59zNGQF64V48tKGZmESBNEUWcsdAX3bozsHin3IlK1y&usqp=CAU"
+        alt=""
+      />
+      <img
+        src="https://www.route2fi.com/wp-content/uploads/2019/04/nnn.jpg"
+        alt=""
+      />
+      <img
+        src="https://www.hdwallpapersnature.com/wp-content/uploads/2019/07/Desktop-Nature-HD-Wallpaper-4.jpg"
+        alt=""
+      />
+    </div>
+    <div>
+      <img src="" alt="" id="mainImage" style="width: 800px; height: 600px;" />
+    </div>
+    <script>
+      document.getElementById("myImages").onclick = function (event) {
+        console.log(event.target.src);
+        document
+          .getElementById("mainImage")
+          .setAttribute("src", event.target.src);
+      };
+      document.getElementsByTagName("button")[0].onclick = sayHello;
+      function sayHello(m) {
+        console.log(m);
+      }
+    </script>
+  </body>
+</html>

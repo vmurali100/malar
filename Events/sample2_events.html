@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Adding a eventhandler as attribute -->
+    <button onclick="clickme()" id="" class="" name="">Click</button>
+    <ul id="myStates">
+      <li>Andhra</li>
+      <li>Tamilnadu</li>
+      <li>Karnataka</li>
+      <li>Kerala</li>
+      <li>Maharashtra</li>
+    </ul>
+    <img src="" alt="" id="myImage" style="width: 400px; height: 300px;" />
+    <script>
+      //Adding a Event handler in DOM Method
+      //   document.getElementById("myStates").onclick = handleClick;
+
+      function handleClick(e) {
+        console.log(e.target.innerText);
+        if (e.target.innerText == "Andhra") {
+          document
+            .getElementById("myImage")
+            .setAttribute(
+              "src",
+              "https://popper.ai/ncov19/img/districts-Andhra-Pradesh-2020-04-02T13:15.jpg"
+            );
+        } else if (e.target.innerText == "Maharashtra") {
+          document
+            .getElementById("myImage")
+            .setAttribute(
+              "src",
+              "https://media.9curry.com/uploads/state/image/17/Maharashtra.png"
+            );
+        }
+
+        document
+          .getElementById("myStates")
+          .removeEventListener("click", handleClick);
+      }
+
+      document
+        .getElementById("myStates")
+        .addEventListener("click", handleClick);
+
+      //   document
+      //     .getElementById("myStates")
+      //     .setAttribute("onclick", "handleClick()");
+    </script>
+  </body>
+</html>
