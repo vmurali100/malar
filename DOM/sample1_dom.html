@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul></ul>
+    <script>
+      // Arrays
+      //   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+      var users = ["Murali", "Krishna", "Ram", "Ravi", "Sam"];
+      function displayUsers() {
+        //   ES6
+        // var newValues = users.map(function (xyz) {
+        //   return xyz;
+        // });
+        // console.log(newValues); // Map statement will return an array
+        var allValues = users.map(function (val) {
+          if (val == "Ravi") {
+            //Single = is asignment operator
+            val = "Ravi Kumar";
+          }
+          return val;
+        });
+        console.log(users);
+        console.log(allValues);
+        // console.log(allValues); //For each statement wont return Any Array .
+        // var filteredValue = users.find(function (val) {
+        //   return val.indexOf("R") == 0;
+        // });
+        // var filteredValues = users.filter(function (val) {
+        //   return val.indexOf("R") == 0;
+        // });
+        // console.log(filteredValue);
+        // console.log(filteredValues);
+        // ES5
+        // for (k = 0; k < users.length; k++) {
+        //   console.log(users[k]);
+        // }
+
+        // users.every(function (val) {
+        //   console.log(val);
+        // });
+        // https://www.w3schools.com/jsref/jsref_every.asp
+
+        var nos = [10, 20, 40, 50];
+        var sumValue = nos.reduce(function (a, b) {
+          return a + b;
+        });
+
+        console.log(sumValue);
+      }
+
+      displayUsers();
+    </script>
+  </body>
+</html>
