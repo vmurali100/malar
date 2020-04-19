@@ -3,9 +3,7 @@ function getAllUsersFromServer() {
   var getInfo = new XMLHttpRequest();
   getInfo.onreadystatechange = function () {
     if (getInfo.readyState == 4 && getInfo.status == 200) {
-      console.log(getInfo.response);
       users = JSON.parse(getInfo.response);
-      console.log(users);
       displayAllUsers();
     }
   };
@@ -16,7 +14,8 @@ function getAllUsersFromServer() {
 getAllUsersFromServer();
 
 function displayAllUsers() {
-  users.map((user) => {
+  document.getElementById("myUsers").innerHTML = "";
+  users.map((user, index) => {
     var myTr = document.createElement("tr");
     for (a in user) {
       var td = document.createElement("td");
@@ -30,10 +29,11 @@ function displayAllUsers() {
     var editBtn = document.createElement("button");
     editBtn.innerHTML = "Edit";
     editBtn.setAttribute("class", "btn btn-warning");
+    editBtn.setAttribute("onclick", "editUser(" + index + ")");
     var deleteBtn = document.createElement("button");
     deleteBtn.innerHTML = "Delete";
     deleteBtn.setAttribute("class", "btn btn-danger");
-
+    deleteBtn.setAttribute("onclick", "deleteUser(" + index + ")");
     editTd.appendChild(editBtn);
     deleteTd.appendChild(deleteBtn);
     myTr.appendChild(editTd);

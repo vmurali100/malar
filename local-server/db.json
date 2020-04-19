@@ -1,16 +1,40 @@
 {
   "users": [
     {
-      "fname": "Murali",
+      "fname": "Ram",
       "lname": "Krishna",
       "email": "vmurali100@gmail.com",
       "id": 1
     },
     {
-      "fname": "Malar",
-      "lname": "V",
-      "email": "malar@gmail.com",
+      "fname": "Murali Krishna",
+      "lname": "Krishna",
+      "email": "vmurali100@gmail.com",
       "id": 2
+    },
+    {
+      "fname": "Ravi updated",
+      "lname": "Veesambattu",
+      "email": "vmurali100@gmail.com",
+      "id": 3
+    },
+    {
+      "fname": "Kumar ",
+      "lname": "Veesambattu",
+      "email": "vmurali100@gmail.com",
+      "id": 4
+    },
+    {
+      "fname": "Sam",
+      "lname": "Krishna",
+      "email": "vmurali100@gmail.com",
+      "id": 5
+    },
+    {
+      "fname": "Ram",
+      "lname": "Kumar",
+      "email": "vmurali100@gmail.com",
+      "id": 6
     }
   ],
   "students": []
